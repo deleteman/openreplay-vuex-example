@@ -6,17 +6,21 @@ import product from './product'
 
 Vue.use(Vuex)
 
-export default function () {
-  const Store = new Vuex.Store({
-    modules: {
-      account,
-      product
-    },
 
-    // enable strict mode (adds overhead!)
-    // for dev mode only
-    strict: process.env.DEV
-  })
+export default function (plugins = []) {
+  return function() {
+    const Store = new Vuex.Store({
+      modules: {
+        account,
+        product
+      },
 
-  return Store
+      // enable strict mode (adds overhead!)
+      // for dev mode only
+      strict: process.env.DEV,
+      plugins
+    })
+
+    return Store
+  }
 }
