@@ -1,6 +1,6 @@
 # VueX state tracking with OpenReplay example
 
-_(This project is a fork of [https://github.com/Dunebook/Vue-ecommerce](https://github.com/Dunebook/Vue-ecommerce) with added tracking code to use as an example)_
+This project uses a fake e-commerce site to show how to integrate OpenReplay's VueX plugin into your code.
 
 ## Project setup
 ```
